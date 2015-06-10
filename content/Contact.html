@@ -1,0 +1,25 @@
+{% extends "main.j2" %}
+
+{% block content %}
+
+<div class="margined attorney">
+<div class="row">
+	<div class="col-md-9">
+	{% include "contact_form.j2" %}
+	</div>
+	<div class="col-md-3">
+		<div id="contactsidebar">
+			<legend>Boston Location</legend>
+			<p class="contactinfo"><b>Phone:</b> 617-651-5086</p>
+			<p class="contactinfo"><b>Fax:</b> 617-423-4058</p>
+			<p class="contactinfo"><b><a>Visit our office</a></b></p>
+
+			<legend>Lexington Location</legend>
+			<p class="contactinfo"><b><a>Visit our office</a></b></p>
+		</div>
+			<img class="fill" src="{{ media_url('img/haysandskerry.jpg') }}"> 
+	</div>
+</div>
+</div>
+
+{% endblock %}

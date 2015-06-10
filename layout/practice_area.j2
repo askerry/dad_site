@@ -1,0 +1,17 @@
+{% extends "main.j2" %}
+
+{% block content %}
+
+<div class="margined centered">
+	<div class="row" id="practicearea">
+		<div class="col-md-6">
+			<h2>{% block title %}{% endblock %}</h2>
+		</div>
+		<img class="col-md-6" src={% block imgtitle %}{% endblock %}>
+	</div>
+	<div class="row" id="practiceareadescrip">
+		{% block areacontent %}{% endblock %}
+	</div>
+</div>
+
+{% endblock %}

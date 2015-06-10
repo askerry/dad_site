@@ -1,0 +1,44 @@
+{% extends "main.j2" %}
+
+{% block content %}
+
+<div class="margined">
+	<h2>Areas of Expertise</h2>
+	<img src="{{ media_url('img/strategy.jpg') }}" class="inlinebigger">
+	<p class="important">
+	Attorneys William C. Hays and Jeffrey J. Skerry have a long and distinguished tradition of providing outstanding legal counsel and have more than 75 years of combined experience between them. Our lawyers will be deeply involved in your project from day one, taking the time to understand your situation, identify your options and execute your plan with efficiency and care. Our goal is to help you resolve your legal matter and reach your goals. Both William C Hays and Jeffrey J. Skerry are rated AV-Preeminent by Martindale-Hubbell for excellent legal service and ethical standards.
+	</p>
+	<div class="row area">
+		<div class="col-md-6 entry">
+			<h3>Business & Commercial Law</h3>
+			<p class="caption"> acquisitions and sales, buy-sell agreements, contracts, lending and financing, taxation</p><p><a href="../CommercialLaw.html">Learn More</a></p>
+		</div>
+		<div class="col-md-6 entry">
+			<h3>Estate Planning </h3>
+			<p class="caption"> wills, trusts, charitable giving, business succession planning and tax planning</p><p><a>Learn More</a></p>
+		</div>
+	</div>
+	<div class="row area">
+		<div class="col-md-6 entry">
+			<h3>Tax Law</h3>
+			<p class="caption"> preparation of personal income tax, estate tax, fiduciary income tax and gift tax returns, creation and management of 501(c)(3) tax-exempt entities, tax strategy advice</p><p><a>Learn More</a></p>
+		</div>
+		<div class="col-md-6 entry">
+			<h3>Trust Administration</h3>
+			<p class="caption"> portfolio management, tax return preparation, probate accounting, trust distributions, managing trustee duties and liabilities</p><br><br><p><a>Learn More</a></p>
+		</div>
+	</div>
+	<div class="row area">
+		<div class="col-md-6 entry">
+			<h3>Real Estate Law</h3>
+			<p class="caption"> acquisition and development, sales, leasing, landlord-tenant matters, financing, real estate taxation</p><p><a>Learn More</a></p>
+		</div>
+		<div class="col-md-6 entry">
+			<h3> Probate</h3>
+			<p class="caption"> collection and preservation of property and assets, tax return preparation, estate claims, sale of real estate</p><p><a>Learn More</a></p>
+		</div>
+	</div>
+	{% include "consult.j2" %}
+</div>
+
+{% endblock %}
