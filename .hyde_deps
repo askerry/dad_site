@@ -5,6 +5,8 @@
 !!python/unicode 'JeffreySkerry.html': [main.j2, main_nav.j2, base.j2]
 !!python/unicode 'Locations.html': [main.j2, main_nav.j2, base.j2]
 !!python/unicode 'WilliamHays.html': [main.j2, main_nav.j2, base.j2]
+!!python/unicode 'areas/CommercialLaw.html': [practice_area.j2, main_nav.j2, base.j2,
+  main.j2]
 !!python/unicode 'index.html': [consult.j2, landing_nav.j2, base.j2, landing.j2]
 !!python/unicode 'media/bootstrap/.csscomb.json': []
 !!python/unicode 'media/bootstrap/.csslintrc': []
