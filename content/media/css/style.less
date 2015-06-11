@@ -41,6 +41,7 @@
 @accent_dark: rgb(30,50,75);
 @accent_heavy_med: rgb(40,55,90);
 @accent_med_a: rgba(70,100,135, .1);
+@accent_med_bright:#337ab7;
 @accent_med: rgb(70,100,135);
 @accent_light: rgb(120,160,200);
 @accent_super_light: rgb(175,190,205);
@@ -62,7 +63,6 @@ html {
     background-color: black;
     box-sizing: border-box;
     color:white;
-    font-family: @my-font-family;
 }
 
 *, *:before, *:after {
@@ -88,6 +88,7 @@ a:hover, a:focus {
 .page {
   color:white;
   background-color:black;
+  font-family: @my-font-family;
 }
 
 
@@ -101,7 +102,7 @@ a:hover, a:focus {
     text-decoration: none;
 }
 .content a:hover, a:focus {
-    color: @accent_heavy_med;
+    color: @accent_med_bright;
     text-decoration: none;
 }
 
@@ -203,7 +204,6 @@ a:hover, a:focus {
   color:@accent_med;
   font-size:1.2em;
 }
-
 
 #consult{
   width:50%;
@@ -315,6 +315,7 @@ p.descrip{
   background-position: top;
   color:white;
   background-color:black;
+  font-family: @my-font-family;
 }
 
 .title {
@@ -343,6 +344,9 @@ p.descrip{
 .landingcontent a:hover, a:focus {
     color: @theme_med;
     text-decoration: none;
+}
+.important a{
+  color:@accent_med;
 }
 .tag{
   padding-top:1.5em;
@@ -452,6 +456,7 @@ margin:1em;
 }
 #practiceareadescrip ul {
 list-style-position: inside;
+font-size:1.2em;
 }
 
 .areablock .caption{
