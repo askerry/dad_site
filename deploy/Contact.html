@@ -11,7 +11,11 @@
         <meta name="author" content="Greg Skerry and Amy Skerry">
         <meta name="viewport" content="width=device-width">
         <!--JQUERY-->
-        <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!--bootstrap validator-->
+        <script type="text/javascript" src="media/bootstrapvalidator/src/js/bootstrapValidator.js"></script>
+        <!-- for contact form -->
+        <script src="media/js/wufoo.js"></script>
         <!--my less-->
         <link rel="stylesheet/less" href="media/css/style.less"/> <!--dev only-->
         <!--<link rel="stylesheet/css" type="text/css" href="css/style.css" /> -->
@@ -75,7 +79,7 @@
 	<div class="wideblock">
 	
 
-<form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<form class="well form-horizontal" action=" " method=" "  id="contact_form">
 <fieldset>
 
 <!-- Form Name -->
@@ -158,89 +162,135 @@
 </fieldset>
 </form>
 
+<div id="wufoo_template">
+    <form id="form1" name="form1" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+        action="https://askerry.wufoo.com/forms/zlbk8u81jxcq9s/#public">
+        <input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="1" required />
+        <textarea id="Field5" name="Field5" class="field textarea large" spellcheck="true" rows="10" cols="50" tabindex="2" onkeyup="" required  ></textarea>
+        <input id="Field7" name="Field7" type="text" class="field text medium" value="" maxlength="255" tabindex="3" onkeyup=""       />
+        <input id="Field8" name="Field8" type="text" class="field text medium" value="" maxlength="255" tabindex="4" onkeyup=""       />
+        <input id="Field9" name="Field9" type="text" class="field text medium" value="" maxlength="255" tabindex="5" onkeyup=""       />
+        <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+        <input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Submit"/>
+        <input type="hidden" id="idstamp" name="idstamp" value="YUuIXGOl/GQKw0takHSCnbXuMTmy7u/Q7xjpcXpeJWU=" />
+    </form>
+</div>
+
+
+
+
 <script>
-    $(document).ready(function() {
-        $('#contact_form').bootstrapValidator({
-            // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-            feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
-            fields: {
-                first_name: {
-                    validators: {
+    $(document).ready(
+      function() {
+          $('#contact_form').bootstrapValidator({
+              // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+              feedbackIcons: {
+                  valid: 'glyphicon glyphicon-ok',
+                  invalid: 'glyphicon glyphicon-remove',
+                  validating: 'glyphicon glyphicon-refresh'
+              },
+              fields: {
+                  first_name: {
+                      validators: {
+                              stringLength: {
+                              min: 2,
+                          },
+                              notEmpty: {
+                              message: 'Please supply your first name'
+                          }
+                      }
+                  },
+                   last_name: {
+                      validators: {
+                           stringLength: {
+                              min: 2,
+                          },
+                          notEmpty: {
+                              message: 'Please supply your last name'
+                          }
+                      }
+                  },
+                  email: {
+                      validators: {
+                          notEmpty: {
+                              message: 'Please supply your email address'
+                          },
+                          emailAddress: {
+                              message: 'Please supply a valid email address'
+                          }
+                      }
+                  },
+                  phone: {
+                      validators: {
+                          notEmpty: {
+                              message: 'Please supply your phone number'
+                          },
+                          phone: {
+                              country: 'US',
+                              message: 'Please supply a vaild phone number with area code'
+                          }
+                      }
+                  },
+                  comment: {
+                      validators: {
                             stringLength: {
-                            min: 2,
-                        },
-                            notEmpty: {
-                            message: 'Please supply your first name'
-                        }
-                    }
-                },
-                 last_name: {
-                    validators: {
-                         stringLength: {
-                            min: 2,
-                        },
-                        notEmpty: {
-                            message: 'Please supply your last name'
-                        }
-                    }
-                },
-                email: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Please supply your email address'
-                        },
-                        emailAddress: {
-                            message: 'Please supply a valid email address'
-                        }
-                    }
-                },
-                phone: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Please supply your phone number'
-                        },
-                        phone: {
-                            country: 'US',
-                            message: 'Please supply a vaild phone number with area code'
-                        }
-                    }
-                },
-                comment: {
-                    validators: {
-                          stringLength: {
-                            min: 10,
-                            max: 200,
-                            message:'Please enter at least 10 characters and no more than 200'
-                        },
-                        notEmpty: {
-                            message: 'Please describe your legal need or inquiry'
-                        }
-                        }
-                    }
-                }
-            })
-            .on('success.form.bv', function(e) {
-                $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-                    $('#contact_form').data('bootstrapValidator').resetForm();
+                              min: 10,
+                              max: 200,
+                              message:'Please enter at least 10 characters and no more than 200'
+                          },
+                          notEmpty: {
+                              message: 'Please describe your legal need or inquiry'
+                          }
+                          }
+                      }
+                  }
+              })
+              .on('success.form.bv', function(e) {
+                  $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                      $('#contact_form').data('bootstrapValidator').resetForm();
 
-                // Prevent form submission
-                e.preventDefault();
+                  // Prevent form submission
+                  e.preventDefault();
 
-                // Get the form instance
-                var $form = $(e.target);
+                  // Get the form instance
+                  var $form = $(e.target);
 
-                // Get the BootstrapValidator instance
-                var bv = $form.data('bootstrapValidator');
+                  // Get the BootstrapValidator instance
+                  var bv = $form.data('bootstrapValidator');
 
-                // Use Ajax to submit form data
-                $.post($form.attr('action'), $form.serialize(), function(result) {
-                    console.log(result);
-                }, 'json');
-            });
+                  phone=$( "input[name='phone']" )[0].value;
+                  email=$( "input[name='email']" )[0].value;
+                  fn=$( "input[name='first_name']" )[0].value;
+                  ln=$( "input[name='last_name']" )[0].value;
+                  comment=$( "textarea[name='comment']" )[0].value;
+                  transfer_form(fn, ln, email, phone, comment);
+
+                  // Use Ajax to submit form data
+                  //$.post($form.attr('action'), $form.serialize(), function(result) {
+                  //    console.log(result);
+                  //}, 'json');
+
+        });
+        var transfer_form = function(first_name, last_name, email, phone, description) {
+
+            $("#Field3")[0].value=email
+            $("#Field5")[0].value=description
+            $("#Field7")[0].value=first_name
+            $("#Field8")[0].value=last_name
+            $("#Field9")[0].value=phone
+            console.log($("#Field3")[0].value)
+            console.log($("#Field5")[0].value)
+            console.log($("#Field7")[0].value)
+            console.log($("#Field8")[0].value)
+            console.log($("#Field9")[0].value)
+            submit_and_return = function(event){ 
+              $( "#form1" )[0].submit();
+              console.log('Inquiry Submitted')
+              setTimeout(function() {window.location.replace('Confirmation.html')}, 250);
+            };
+            submit_and_return();
+
+        };
     });
 
 
@@ -251,10 +301,11 @@
 			<legend>Boston Location</legend>
 			<p class="contactinfo"><b>Phone:</b> 617-651-5086</p>
 			<p class="contactinfo"><b>Fax:</b> 617-423-4058</p>
-			<p class="contactinfo"><b><a href="/Locations.html">Visit our office</a></b></p>
+			<p class="contactinfo"><b><a href="Locations.html">Visit our office</a></b></p>
+			<p class="contactinfo"><b><a href=""> Email Jeff </a>---<a href=""> Email William </a></b></p>
 
 			<legend>Lexington Location</legend>
-			<p class="contactinfo"><b><a href="/Locations.html">Visit our office</a></b></p>
+			<p class="contactinfo"><b><a href="Locations.html">Visit our office</a></b></p>
 		</div>
 			<img class="fill" src="media/img/haysandskerry.jpg"> 
 	</div>
