@@ -118,6 +118,14 @@ a:hover, a:focus {
 .header div {
   color:@theme_super_light;
 }
+.header a {
+  color:@theme_super_light;
+  text-decoration:none;
+}
+.header a:hover, a:focus {
+    color: @theme_med;
+    text-decoration: none;
+}
 
 #headerblock {
   width:100%;
@@ -162,8 +170,7 @@ a:hover, a:focus {
 /*         MISC        */ 
 /* ******************* */
 
-.nav_container {
-  .container;
+#nav_container {
   margin-left:0em;
   margin-right:0em;
   width:100%;
@@ -246,11 +253,11 @@ ul.descrip {
   font-size:1.2em;
 }
 .navbar-nav{
-  width:70%;
+  width:100%;
   text-align:center;
 }
 .navbar-nav.landing{
-  width:100%;
+  width:70%;
   text-align:center;
 }
 
@@ -333,8 +340,8 @@ p.descrip{
     text-decoration: none;
 }
 .tag{
-  padding-top:2em;
-  padding-bottom:2em;
+  padding-top:1.5em;
+  padding-bottom:1.5em;
 }
 
 .promise{
@@ -563,6 +570,12 @@ padding-right:7vw;
       margin:5%;;
       margin-top:1.5em;
       margin-bottom:4em;
+  }
+  .inlinebigger{
+    width:60%;
+  }
+  .margined h2{
+    text-align:center;
   }
 }
 
