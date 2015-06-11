@@ -1,6 +1,6 @@
 /*  font styles  */
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,700|Rosario:400,700);
-@import "../bootstrap/mixins.less";
+@import "../bootstrap/bootstrap.less";
 
 @my-font-family: 'Roboto', sans-serif;
 .my-font-family {
@@ -48,10 +48,9 @@
 /* */
 
 
-/*  mixins  */
-.text-shadow (@string: -1px 2px 3px rgba(0, 0, 0, 1)) {
-    text-shadow: @string;
-}
+/* ******************* */
+/*        General      */ 
+/* ******************* */
 
 * {
     margin: 0;
@@ -62,6 +61,7 @@ html {
     background-color: black;
     box-sizing: border-box;
     color:white;
+    font-family: @my-font-family;
 }
 
 *, *:before, *:after {
@@ -73,19 +73,15 @@ body {
   margin-left: 0em;
   background: none;
   color:white;
-  font: @my-font-family2;
 }
 
-.landingpage {
-  background: url(../img/background.jpg);
-  background-repeat: no-repeat;
-  -webkit-background-size: 100% auto;
-  -moz-background-size: 100% auto;
-  -o-background-size: 100% auto;
-  background-size: 100% auto;
-  background-position: top;
-  color:white;
-  background-color:black;
+ul, ol {
+    margin-bottom: .2em;
+    padding-left:3em;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
 }
 
 .page {
@@ -93,221 +89,10 @@ body {
   background-color:black;
 }
 
-#headerblock {
-  width:100%;
-  color:white;
-}
-#headerimage {
-  width:100%;
-  color:white;
-  min-height:150px;
-}
-
-.header div{
-  padding:.3em;
-  margin:auto;
-  height:2em;
-}
-
-  .title {
-    font-size:1.4em;
-    padding-left:5%;
-    padding-top:0em;
-  }
-
-
-  .title h1 {
-    font-size:6.0vw;
-    line-height:.9em;
-  }
-
-.landingcontent {
-  margin:10%;
-  text-align:center;
-  top:10vw;
-}
-
-.header {
-  width:100%;
-  font-size:1.5vw;
-  position:absolute;
-  text-align:center;
-}
-
-.header_title{
-  text-align:center;
-  font-size:5vw;
-  position:absolute;
-  width:100%;
-  top:2.5em;
-}
-
-#practiceareadescrip{
-padding-left:12%;
-padding-right:12%;
-}
-
-#consult{
-  width:50%;
-  margin:25%;;
-  margin-top:1.5em;
-  margin-bottom:1em;
-}
 
 .margined{
   padding-left:8%;
   padding-right:10%;
-}
-
-@media all and (max-width: 900px) {
-
-    .landingpage{
-    background: url(../img/background_tablet.jpg);
-    background-repeat: no-repeat;
-    -webkit-background-size: 100% auto;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    background-size: 100% auto;
-    background-position: top;
-    color:white;
-    background-color:black;
-    }
-
-    .title {
-      font-size:2em;
-      text-align:center;
-    }
-
-    .header{
-      font-size:1.7vw;
-    }
-
-    .header_title{
-      text-align:center;
-      font-size:6vw;
-      position:absolute;
-      width:100%;
-      top:1.5em;
-    }
-
-    .title h1 {
-      font-size:9.0vw;
-    }
-  .landingcontent {
-    font-size:.8em;
-    margin:5%;
-    top:8vw;
-  }
-  .landingcontent h1{
-  font-size:2.5em;
-  }
-
-  .margined{
-  padding-left:7%;
-  padding-right:8%;
-}
-
-  #practiceareadescrip{
-    padding-left:8%;
-    padding-right:8%;
-    }
-
-  #consult{
-    width:70%;
-    margin:15%;;
-    margin-top:1.5em;
-    margin-bottom:3em;
-  }
-
-}
-
-@media all and (max-width: 500px) {
-    .landingpage{
-      background: url(../img/background_phone.jpg);
-      background-repeat: no-repeat;
-      -webkit-background-size: 100% auto;
-      -moz-background-size: 100% auto;
-      -o-background-size: 100% auto;
-      background-size: 100% auto;
-      background-position: top;
-      color:white;
-      background-color:black;
-      }
-
-    .title {
-      font-size:1.6em;
-      text-align:center;
-    }
-
-    .title h1 {
-      font-size:12vw;
-    }
-  .landingcontent {
-    font-size:.7em;
-    margin:0%;
-    top:10vw;
-  }
-  .landingcontent h1{
-  font-size:2.3em;
-  padding:1em;
-  }
-  .header{
-      font-size:3vw;
-    }
-
-  .margined{
-  padding-left:3%;
-  padding-right:4%;
-}
-
-  .header_title{
-    text-align:center;
-    font-size:9vw;
-    position:absolute;
-    width:100%;
-    top:1.7em;
-  }
-
-    #practiceareadescrip{
-    padding-left:2%;
-    padding-right:2%;
-    }
-
-    #consult{
-    width:90%;
-    margin:5%;;
-    margin-top:1.5em;
-    margin-bottom:4em;
-  }
-}
-
-#homelist{
-  font-size:1.5em;
-  line-height:2em;
-  padding:15%;
-  padding-top:3%;
-  padding-bottom:3%;
-}
-
-#homelist li {
-  line-height:1.5em;
-  padding:.7em;
-}
-
-.important{
-  font-size:1.3em;
-  padding-top:1em;
-  text-align:justified;
-  padding-bottom:1em;
-}
-
-.landingcontent a {
-    color: @theme_light;
-    text-decoration: none;
-}
-.landingcontent a:hover, a:focus {
-    color: @theme_med;
-    text-decoration: none;
 }
 
 .content a {
@@ -326,14 +111,95 @@ padding-right:12%;
   color:@accent_super_dark;
 }
 
-.headshot{
-  width:150px;
-  height:auto;
+/* ******************* */
+/*         Main        */ 
+/* ******************* */
+
+.header div {
+  color:@theme_super_light;
 }
 
-p.descrip{
-  padding-top:3.5em;
+#headerblock {
+  width:100%;
+  color:white;
+}
+#headerimage {
+  width:100%;
+  color:white;
+  min-height:150px;
+}
+
+.header div{
+  padding:.3em;
+  margin:auto;
+  height:2em;
+}
+
+.header {
+  width:100%;
+  font-size:1.5vw;
+  position:absolute;
+  text-align:center;
+}
+
+.header_title{
+  text-align:center;
+  font-size:5vw;
+  position:absolute;
+  width:100%;
+  top:2.5em;
+}
+
+.header_navbar{
+  .navbar; 
+  .navbar-inverse;
+  bottom:0em;
+  margin-bottom:0em;
+}
+
+
+/* ******************* */
+/*         MISC        */ 
+/* ******************* */
+
+.nav_container {
+  .container;
+  margin-left:0em;
+  margin-right:0em;
+  width:100%;
+  background-color: @accent_med_a;
+}
+
+.narrowblock{
+  .make-md-column(3; @gutter: @grid-gutter-width);
+  text-align:center;
+}
+.wideblock{
+  .make-md-column(9; @gutter: @grid-gutter-width);
+}
+.equiblock{
+  .make-md-column(6; @gutter: @grid-gutter-width);
+}
+
+.important{
+  font-size:1.3em;
+  padding-top:1em;
+  text-align:justified;
+  padding-bottom:1em;
+}
+
+.important span{
+  padding:1em;
+  color:@accent_med;
   font-size:1.2em;
+}
+
+
+#consult{
+  width:50%;
+  margin:25%;;
+  margin-top:1.5em;
+  margin-bottom:1em;
 }
 
 .inline{
@@ -357,111 +223,13 @@ p.descrip{
   margin-left:2em;
 }
 
-.imgblock{
-  text-align:center;
-}
-
-.entry{
-  margin-top:2em;
-  margin-bottom:2em;
-}
-
-.important span{
-  padding:1em;
-  color:@accent_med;
-  font-size:1.2em;
-}
-
-.header div {
-  color:@theme_super_light;
-}
-
-ul, ol {
-    margin-bottom: .2em;
-    padding-left:3em;
-}
-
 ul.descrip {
   margin-top:1em;
   list-style-position: inside;  
 }
 
-.area{
-font-size:1.2em;
-text-align:center;
-}
-
-.promise{
-text-align:center;
-}
-
-#success_message{ 
-  display: none;
-  }
-#contact_form{
-text-align:center;
-}
-#send_button{
-  width:100%;
-}
-.attorney{
-  font-size:1.1em;
-}
-#contactsidebar{
-  background-color:@accent_dark;
-  color:@accent_super_light;
-  border-radius: 5px;
-  height:100%;
-  padding:.6em;
-  margin-bottom:1em;
-}
-#contactsidebar legend{
-  color:white;
-}
-.contactinfo.b{
-  color:@accent_med;
-  font-size:1.3em;
-}
-.area h3{
-  font-size:1.4em;
-}
-
 .centered div {
   text-align:center;
-}
-
-#practicearea{
-  width:90%;
-  max-width:35em;
-  margin:auto;
-  text-align:center;
-  margin-bottom:2em;
-}
-
-#practiceareadescrip p {
-margin:1em;
-}
-#practiceareadescrip ul {
-list-style-position: inside;
-}
-
-.area .caption{
-display:block;
-padding-top:1em;
-padding-left:7vw;
-padding-right:7vw;
-}
-
-.promise .caption{
-padding-top:1em;
-padding-left:4vw;
-padding-right:4vw;
-font-size:1.3em;
-}
-
-.promise h3{
-color: @accent_med;
-font-size:2em;
 }
 
 /* ******************* */
@@ -487,32 +255,316 @@ font-size:2em;
 }
 
 /* ******************* */
-/* bootstrap additions */ 
+/* bootstrap constants */ 
 /* ******************* */
 
-#header_navbar{
-  bottom:0em;
-  margin-bottom:0em;
+@grid-columns:              12;
+@grid-gutter-width:         30px;
+@grid-float-breakpoint:     768px;
+
+
+/* ******************* */
+/* attorney page */ 
+/* ******************* */
+
+.attorney{
+  font-size:1.1em;
 }
 
-#header_tags{
-  margin:0em;
+.headshot{
+  width:150px;
+  height:auto;
 }
 
-#company_tag{
+.entry{
+  .make-row(@gutter: @grid-gutter-width);
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+
+p.descrip{
+  padding-top:3.5em;
+  font-size:1.2em;
+}
+
+/* ******************* */
+/* landing page */ 
+/* ******************* */
+
+
+.landingpage {
+  background: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  background-position: top;
+  color:white;
+  background-color:black;
+}
+
+.title {
+    .make-row(@gutter: @grid-gutter-width);
+    font-size:1.4em;
+    padding-left:5%;
+    padding-top:0em;
+  }
+
+
+.title h1 {
+    font-size:6.0vw;
+    line-height:.9em;
+  }
+
+.landingcontent {
+  margin:10%;
+  text-align:center;
+  top:10vw;
+}
+
+.landingcontent a {
+    color: @theme_light;
+    text-decoration: none;
+}
+.landingcontent a:hover, a:focus {
+    color: @theme_med;
+    text-decoration: none;
+}
+.tag{
+  padding-top:2em;
+  padding-bottom:2em;
+}
+
+.promise{
+  .make-row(@gutter: @grid-gutter-width);
+  text-align:center;
+}
+.promise .caption{
+  padding-top:1em;
+  padding-left:4vw;
+  padding-right:4vw;
+  font-size:1.3em;
+}
+
+.promise h3{
+  color: @accent_med;
+  font-size:2em;
+}
+
+.company_tag{
+  .navbar-brand;
   font-size:1.7em;
 }
+
+/* ******************* */
+/* contact page */ 
+/* ******************* */
+
+#contactsidebar{
+  background-color:@accent_dark;
+  color:@accent_super_light;
+  border-radius: 5px;
+  height:100%;
+  padding:.6em;
+  margin-bottom:1em;
+}
+#contactsidebar legend{
+  color:white;
+}
+.contactinfo.b{
+  color:@accent_med;
+  font-size:1.3em;
+}
+
+#success_message{ 
+  display: none;
+  }
+#contact_form{
+text-align:center;
+}
+#send_button{
+  width:100%;
+}
+
 .fill{
   width:100%;
   border-radius:5px
 }
-#container_navbar {
-  margin-left:0em;
-  margin-right:0em;
-  width:100%;
-  background-color: @accent_med_a;
+
+/* ******************* */
+/*     Area Pages      */ 
+/* ******************* */
+
+#practiceareadescrip{
+  padding-left:12%;
+  padding-right:12%;
 }
 
-a:hover, a:focus {
-    text-decoration: none;
+.areablock{
+  .make-row(@gutter: @grid-gutter-width);
+  font-size:1.2em;
+  text-align:center;
 }
+.areablock h3{
+  font-size:1.4em;
+}
+#practicearea{
+  width:90%;
+  max-width:35em;
+  margin:auto;
+  text-align:center;
+  margin-bottom:2em;
+}
+
+.area{
+  .make-md-column(6; @gutter: @grid-gutter-width);
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+#practiceareadescrip p {
+margin:1em;
+}
+#practiceareadescrip ul {
+list-style-position: inside;
+}
+
+.areablock .caption{
+display:block;
+padding-top:1em;
+padding-left:7vw;
+padding-right:7vw;
+}
+
+/* ******************* */
+/*   Responsiveness    */ 
+/* ******************* */
+
+@media all and (max-width: 900px) {
+
+  .landingpage{
+    background: url(../img/background_tablet.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    background-position: top;
+    color:white;
+    background-color:black;
+  }
+
+  .title {
+   .make-row(@gutter: @grid-gutter-width);
+    font-size:2em;
+    text-align:center;
+  }
+
+  .header{
+    .make-row(@gutter: @grid-gutter-width);
+    margin:0em;
+    font-size:1.7vw;
+  }
+
+  .header_title{
+    text-align:center;
+    font-size:6vw;
+    position:absolute;
+    width:100%;
+    top:1.5em;
+  }
+
+  .title h1 {
+    font-size:9.0vw;
+  }
+  .landingcontent {
+    font-size:.8em;
+    margin:5%;
+    top:8vw;
+  }
+  .landingcontent h1{
+    font-size:2.5em;
+  }
+
+  .margined{
+    padding-left:7%;
+    padding-right:8%;
+  }
+
+  #practiceareadescrip{
+    padding-left:8%;
+    padding-right:8%;
+  }
+
+  #consult{
+    width:70%;
+    margin:15%;;
+    margin-top:1.5em;
+    margin-bottom:3em;
+  }
+}
+
+@media all and (max-width: 500px) {
+    .landingpage{
+      background: url(../img/background_phone.jpg);
+      background-repeat: no-repeat;
+      -webkit-background-size: 100% auto;
+      -moz-background-size: 100% auto;
+      -o-background-size: 100% auto;
+      background-size: 100% auto;
+      background-position: top;
+      color:white;
+      background-color:black;
+    }
+
+    .title {
+      font-size:1.6em;
+      text-align:center;
+    }
+
+    .title h1 {
+      font-size:12vw;
+    }
+    .landingcontent {
+      font-size:.7em;
+      margin:0%;
+      top:10vw;
+    }
+    .landingcontent h1{
+      font-size:2.3em;
+      padding:1em;
+    }
+    .header{
+      font-size:3vw;
+    }
+
+    .margined{
+      padding-left:3%;
+      padding-right:4%;
+    }
+
+    .header_title{
+      text-align:center;
+      font-size:9vw;
+      position:absolute;
+      width:100%;
+      top:1.7em;
+    }
+
+    #practiceareadescrip{
+      padding-left:2%;
+      padding-right:2%;
+    }
+
+    #consult{
+      width:90%;
+      margin:5%;;
+      margin-top:1.5em;
+      margin-bottom:4em;
+  }
+}
+
+
+
