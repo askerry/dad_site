@@ -3,8 +3,14 @@
 !!python/unicode 'CommercialLaw.html': [practice_area.j2, main_nav.j2, base.j2, main.j2]
 !!python/unicode 'Confirmation.html': [landing_nav.j2, base.j2, landing.j2]
 !!python/unicode 'Contact.html': [main.j2, main_nav.j2, base.j2, contact_form.j2]
+!!python/unicode 'EstatePlanning.html': [practice_area.j2, main_nav.j2, base.j2, main.j2]
 !!python/unicode 'JeffreySkerry.html': [main.j2, main_nav.j2, base.j2]
 !!python/unicode 'Locations.html': [main.j2, main_nav.j2, base.j2]
+!!python/unicode 'Probate.html': [practice_area.j2, main_nav.j2, base.j2, main.j2]
+!!python/unicode 'RealEstate.html': [practice_area.j2, main_nav.j2, base.j2, main.j2]
+!!python/unicode 'TaxLaw.html': [practice_area.j2, main_nav.j2, base.j2, main.j2]
+!!python/unicode 'TrustAdministration.html': [practice_area.j2, main_nav.j2, base.j2,
+  main.j2]
 !!python/unicode 'WilliamHays.html': [main.j2, main_nav.j2, base.j2]
 !!python/unicode 'areas/CommercialLaw.html': [practice_area.j2, main_nav.j2, base.j2,
   main.j2]
