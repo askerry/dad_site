@@ -192,6 +192,11 @@ a:hover, a:focus {
   .make-md-column(6; @gutter: @grid-gutter-width);
 }
 
+.vcenter{
+  display:flex;
+  align-items:center;
+}
+
 .important{
   font-size:1.3em;
   padding-top:1em;
@@ -444,11 +449,19 @@ text-align:center;
   font-size:1.4em;
 }
 #practicearea{
+  .row;
   width:90%;
+  .vcenter;
   max-width:35em;
   margin:auto;
   text-align:center;
   margin-bottom:2em;
+  border-radius:10px;
+  background-color:@accent_dark;
+  color:white;
+}
+#practicearea h1{
+  bottom:1em;
 }
 
 .area{
@@ -473,10 +486,26 @@ padding-left:7vw;
 padding-right:7vw;
 }
 
-.sublist li{
-  font-size:.9em;
+#sublist {
+  text-align:left;
+  padding-left:15% !important;
 }
 
+#sublist li{
+  font-size:.7em;
+}
+
+.areaimg{
+  .make-md-column(6; @gutter: @grid-gutter-width);
+}
+
+.areaimg img{
+  border-radius:5px;
+  margin-bottom:1em;
+  margin-top:1em; 
+  width:100%;
+  max-width:300px;
+}
 /* *************************************************************************************** */
 /*                                       RESPONSIVENESS                                    */ 
 /* *************************************************************************************** */
@@ -546,6 +575,10 @@ padding-right:7vw;
   .mapdiv{
     width:95%;
   }
+   #practiceareadescrip{
+    padding-left:3%;
+    padding-right:3%;
+  }
 }
 
 @media all and (max-width: 500px) {
@@ -614,6 +647,13 @@ padding-right:7vw;
   }
   .mapdiv{
   width:100%;
+  }
+   #practiceareadescrip{
+    padding-left:1%;
+    padding-right:1%;
+  }
+  #practicearea{
+    display:block;
   }
 }
 

@@ -3,11 +3,11 @@
 {% block content %}
 
 <div class="margined centered">
-	<div class="row" id="practicearea">
+	<div id="practicearea">
 		<div class="col-md-6">
-			<h2>{% block title %}{% endblock %}</h2>
+			<h1>{% block title %}{% endblock %}</h1>
 		</div>
-		<img class="col-md-6" src={% block imgtitle %}{% endblock %}>
+		<div class="areaimg"><img src={% block imgtitle %}{% endblock %}></div>
 	</div>
 	<div class="row" id="practiceareadescrip">
 		{% block areacontent %}{% endblock %}
