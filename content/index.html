@@ -1,5 +1,10 @@
 {% extends "landing.j2" %}
 
+{% block title %}
+Home
+{% endblock %}
+
+
 {% block outer %}
     <!-- Page Content -->
     <div class="landingpage">
@@ -10,22 +15,37 @@
             </div>
         </div>
         <div class="landingcontent">
-            <h1>Helping you achieve your success is our success</h1>
+            
 
 		    <div class="promise">
 				<div class="equiblock tag">
 					<h3> Expertise </h3>
-					<p class="caption"> Experienced, trusted advisors in <a>business law</a>, <a>real estate</a>, <a>taxation</a>, <a>estate planning</a>, <a>probate</a> and <a>trust administration</a></p>
+					<p class="caption"> Experienced,
+					trusted advisors in <a class="bright"
+					href="CommercialLaw.html">business
+					law</a>, <a class="bright"
+					href="RealEstate.html">real estate</a>,
+					<a class="bright"
+					href="TaxLaw.html">taxation</a>,
+					<a class="bright"
+					href="EstatePlanning.html">estate
+					planning</a>, <a class="bright"  href="Probate">probate</a> and <a class="bright"
+					href="TrustAdministration">trust administration</a></p>
 				</div>
 				<div class="equiblock tag">
 					<h3> Service and Commitment </h3>
-					<p class="caption"> Combining the comprehensive, sophisticated solutions of a large law firm with a small firm’s commitment to care and personal service</p>
+					<p class="caption"> Combining the
+					comprehensive, sophisticated solutions
+					of a large law firm with a small firm’s
+					commitment to personal service</p>
 				</div>
 			</div>
 			<div class="promise">
 				<div class="equiblock tag">
 					<h3> Quality and Value </h3>
-					<p class="caption"> Offering high quality, efficient solutions to the modern legals needs of individuals, families, businesses, institutions and nonprofits</p>
+					<p class="caption"> Offering high
+					quality, personalized, and efficient
+					legal solutions to meet the complex legal needs of individuals, families, businesses, institutions and non-profits</p>
 				</div>
 				<div class="equiblock tag">
 					<h3> Convenience </h3>
@@ -34,9 +54,10 @@
 			</div>
 
             <p class="important">
-            Attorneys <a>William C. Hays</a> and <a>Jeffrey J. Skerry</a> have a long and distinguished tradition of providing outstanding legal counsel and have more than 75 years of combined experience between them. Our lawyers will be deeply involved in your project from day one, taking the time to understand your situation, identify your options and execute your plan with efficiency and care. Our goal is to help you resolve your legal matter and reach your goals.
+            Attorneys <a class="bright" href="WilliamHays.html">William
+            C. Hays</a> and <a class="bright" href="JeffreySkerry.html">Jeffrey J. Skerry</a> have a long and distinguished tradition of providing outstanding legal counsel and have more than 75 years of combined experience between them. Our lawyers will be deeply involved in your project from day one, taking the time to understand your situation, identify your options and execute your plan. Our goal is to help you resolve your legal matter and reach your goals.
             </p>
-            <div class="important"><span><a href="Locations.html">Serving the Greater Boston Area</a></span><span><a "Locations.html">Offices in Boston and Lexington</a></span><span><a "Contact.html">617-651-5086</a></span></div>
+            <div class="important"><span><a href="Locations.html">Serving the Greater Boston Area</a></span><span><a "Locations.html">Offices in Boston and Lexington</a></span><span><a "Contact.html">{% if resource.meta.phone-%}{{ resource.meta.phone}}{%-endif %}</a></span></div>
             {% include "consult.j2" %}
 
     </div>

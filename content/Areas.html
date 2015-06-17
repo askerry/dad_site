@@ -1,44 +1,66 @@
 {% extends "main.j2" %}
 
+{% block title %}
+Practice Areas
+{% endblock %}
+
 {% block content %}
 
 <div class="margined">
-	<h2>Areas of Expertise</h2>
-	<img src="{{ media_url('img/strategy.jpg') }}" class="inlinebigger">
-	<p>
-	Attorneys William C. Hays and Jeffrey J. Skerry have a long and distinguished tradition of providing outstanding legal counsel and have more than 75 years of combined experience between them. Our lawyers will be deeply involved in your project from day one, taking the time to understand your unique situation, identify your options and execute your plan with efficiency and care. Hays & Skerry serves both individual and business clients, providing expert legal counsel in a number of areas of estate planning, real estate, and financial matters. We are dedicated to providing high quality, efficient solutions in each of the following legal domains.
-	</p>
-	<div class="areablock">
-		<div class="area">
-			<h3>Business & Commercial Law</h3>
-			<p class="caption"> acquisitions and sales, buy-sell agreements, contracts, lending and financing, taxation</p><p><a href="CommercialLaw.html">Learn More</a></p>
-		</div>
-		<div class="area">
-			<h3>Estate Planning </h3>
-			<p class="caption"> wills, trusts, charitable giving, business succession planning and tax planning</p><p><a href="EstatePlanning.html">Learn More</a></p>
-		</div>
+    <h2>Areas of Expertise</h2>
+    <img src="{{ media_url('img/strategy.jpg') }}" class="inlinebigger">
+    <p>
+        Attorneys William C. Hays and Jeffrey J. Skerry have a long and
+        distinguished tradition of providing outstanding legal counsel and have
+        more than 75 years of combined experience between them. Our lawyers
+        will be deeply involved in your project from day one, taking the time
+        to understand your unique situation, identify your options and execute
+        your plan. We offer individual, personalized legal solutions that span
+        a wide range of practice areas. We offer the flexibility to integrate
+        these capabilities in any number of ways in order to achieve our
+        clients' business or personal objectives.  We are dedicated to providing high quality, efficient
+        solutions in each of the following practice areas. Disclaimer: Please
+        note that none of the information on this site constitutes legal advice.
+    </p>
+    <div class="areablock">
+        <div class="area">
+	    <h3>Business & Commercial Law</h3>
+	    <p class="caption"> acquisitions and sales, buy-sell agreements, contracts, lending and financing, taxation</p><p><a href="BusinessLaw.html">Learn More</a></p>
+        </div>
+	<div class="area">
+	    <h3>Estate Planning </h3>
+	    <p class="caption"> wills, trusts, charitable giving, business succession planning and tax planning</p><p><a href="EstatePlanning.html">Learn More</a></p>
 	</div>
-	<div class="areablock">
-		<div class="area">
-			<h3>Tax Law</h3>
-			<p class="caption"> preparation of personal income tax, estate tax, fiduciary income tax and gift tax returns, creation and management of 501(c)(3) tax-exempt entities, tax strategy advice</p><p><a href="TaxLaw.html">Learn More</a></p>
-		</div>
-		<div class="area">
-			<h3>Trust Administration</h3>
-			<p class="caption"> portfolio management, tax return preparation, probate accounting, trust distributions, managing trustee duties and liabilities</p><br><p><a href="TrustAdministration.html">Learn More</a></p>
-		</div>
+    </div>
+    <div class="areablock">
+	<div class="area">
+	    <h3>Tax Law</h3>
+	    <p class="caption"> preparation of personal income tax returns,
+	    estate tax returns, fiduciary income tax returns and gift tax returns, creation and management of 501(c)(3) tax-exempt entities, tax strategy advice</p><p><a href="TaxLaw.html">Learn More</a></p>
+        </div>
+	<div class="area">
+	    <h3>Trust Administration</h3>
+	    <p class="caption"> portfolio management, tax return preparation,
+	    probate accounting, trust distributions, managing trustee duties
+	    and liabilities</p><br><p><a href="TrustAdministration.html">Learn
+	            More</a></p>
 	</div>
-	<div class="areablock">
-		<div class="area">
-			<h3>Real Estate Law</h3>
-			<p class="caption"> acquisition and development, sales, leasing, landlord-tenant matters, financing, real estate taxation</p><p><a href="RealEstate.html">Learn More</a></p>
-		</div>
-		<div class="area">
-			<h3> Probate</h3>
-			<p class="caption"> collection and preservation of property and assets, tax return preparation, estate claims, sale of real estate</p><p><a href="Probate.html">Learn More</a></p>
-		</div>
+    </div>
+    <div class="areablock">
+	<div class="area">
+	    <h3>Real Estate Law</h3>
+	    <p class="caption"> acquisition and development, sales, leasing,
+	    landlord-tenant matters, financing, real estate
+	        taxation</p><p><a href="RealEstate.html">Learn More</a></p>
 	</div>
-	{% include "consult.j2" %}
+	<div class="area">
+	    <h3> Probate</h3>
+	    <p class="caption"> collection and preservation of property and
+	    assets, tax return preparation, estate claims, sale of real
+	        estate</p><p><a href="Probate.html">Learn More</a></p>
+	</div>
+    </div>
+    {% include "consult.j2" %}
 </div>
 
 {% endblock %}

@@ -1,6 +1,8 @@
 /*  font styles  */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,700|Rosario:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400|Rosario:400);
 @import "../bootstrap/bootstrap.less";
+
+@-ms-viewport{ width: auto !important; }
 
 @my-font-family: 'Roboto', sans-serif;
 .my-font-family {
@@ -107,8 +109,10 @@ a:hover, a:focus {
 }
 
 .content{
-  padding:5%;
+  padding-left:4%;
   padding-top:2%;
+  padding-right:0%;
+  padding-bottom:5%;
   background-color:@theme_super_light;
   color:@accent_super_dark;
 }
@@ -141,7 +145,7 @@ a:hover, a:focus {
 }
 
 .header div{
-  padding:.3em;
+  padding:.1.5em;
   margin:auto;
   height:2em;
 }
@@ -158,7 +162,15 @@ a:hover, a:focus {
   font-size:5vw;
   position:absolute;
   width:100%;
-  top:2.5em;
+  top:12vw;
+}
+
+.header_tagline{
+  text-align:center;
+  font-size:2vw;
+  position:absolute;
+  width:100%;
+  top:18vw;
 }
 
 .header_navbar{
@@ -247,18 +259,58 @@ ul.descrip {
   text-align:center;
 }
 
+#definition{
+   width:21% !important;
+   text-transform:uppercase;
+}
+
+#definition a{
+        color:@accent_med !important;
+}
+.subbar_navbar{
+        .header_navbar;
+        background-color:white;
+        border:0px !important;
+        border-color:white !important;
+        min-height:0px;
+        max-height:1.9em;
+        border-radius:0px !important;
+}
+.subbar_navbar li{
+  width:13.1% !important;
+  font-size:.9em !important;
+}
+.subbar_navbar a{
+  padding:0em !important;
+  margin-top: .4em;
+  margin-bottom: .3em;
+}
+
+.subbar_navbar a:hover{
+  color:black !important;
+}
+
+#subbar_navbar_landing{
+  bottom:3.5em !important;
+}
+
+.topoff{
+padding-top:.5em;
+}
+
+
 /* *************************************************************************************** */
 /*                                   BOOTSTRAP OVERRIDES                                   */ 
 /* *************************************************************************************** */
 
 
 .navbar-header{
-  padding-right:5.5vw;
+  padding-right:2vw;
   padding-left:1vw;
 }
 
 .nav li {
-  width:20%;
+  width:16.6%;
   font-size:1.2em;
 }
 .navbar-nav{
@@ -266,7 +318,7 @@ ul.descrip {
   text-align:center;
 }
 .navbar-nav.landing{
-  width:70%;
+  width:73%;
   text-align:center;
 }
 
@@ -305,6 +357,34 @@ p.descrip{
   font-size:1.2em;
 }
 
+.blurb{
+.make-md-column(7; @gutter: @grid-gutter-width);
+}
+
+.learnmore{
+.make-md-column(5; @gutter: @grid-gutter-width);
+border-color:green;
+padding:2.5em;
+padding-left:3.5em;
+}
+
+.lmbtn{
+ .btn-info !important;
+ padding:.8em;
+ padding-left:.6em;
+ padding-right:.6em;
+ font-size:1.2em;
+ border-radius:5px;
+}
+.sideimg{
+.make-md-column(4; @gutter: @grid-gutter-width);
+padding-top:3em;
+}
+.text{
+.make-md-column(8; @gutter: @grid-gutter-width);
+font-size: 1.2em;
+}
+
 /* *************************************************************************************** */
 /*                                        LANDING PAGE                                     */
 /* *************************************************************************************** */
@@ -325,11 +405,15 @@ p.descrip{
 
 .title {
     .make-row(@gutter: @grid-gutter-width);
+    font-family:@my-font-family2;
     font-size:1.4em;
     padding-left:5%;
     padding-top:0em;
   }
 
+.bright{
+    color:#bbddff important!;
+}
 
 .title h1 {
     font-size:6.0vw;
@@ -487,12 +571,12 @@ padding-right:7vw;
 }
 
 #sublist {
-  text-align:left;
-  padding-left:15% !important;
+  padding-top:1em;
 }
 
 #sublist li{
   font-size:.7em;
+  width:100%;
 }
 
 .areaimg{
@@ -509,6 +593,14 @@ padding-right:7vw;
 /* *************************************************************************************** */
 /*                                       RESPONSIVENESS                                    */ 
 /* *************************************************************************************** */
+
+@media all and (max-width: 1190px) {
+
+#subbar_navbar_landing{
+        bottom:4.7em !important;
+  }
+
+}
 
 @media all and (max-width: 900px) {
 
@@ -537,12 +629,13 @@ padding-right:7vw;
   }
 
   .header_title{
-    text-align:center;
-    font-size:6vw;
-    position:absolute;
-    width:100%;
-    top:1.5em;
-  }
+      font-size:6vw;
+      top:10vw;
+    }
+    .header_tagline{
+      fontsize:3vw;
+      top:16.5vw;
+    }
 
   .title h1 {
     font-size:9.0vw;
@@ -579,6 +672,10 @@ padding-right:7vw;
     padding-left:3%;
     padding-right:3%;
   }
+  #subbar_navbar_landing{
+        bottom:4.7em !important;
+  }
+
 }
 
 @media all and (max-width: 500px) {
@@ -602,6 +699,10 @@ padding-right:7vw;
     .title h1 {
       font-size:12vw;
     }
+    #subbar_navbar_landing{
+        bottom:4.5em !important;
+     }
+
     .landingcontent {
       font-size:.7em;
       margin:0%;
@@ -612,7 +713,7 @@ padding-right:7vw;
       padding:1em;
     }
     .header{
-      font-size:3vw;
+      font-size:2vw;
     }
 
     .margined{
@@ -621,11 +722,12 @@ padding-right:7vw;
     }
 
     .header_title{
-      text-align:center;
       font-size:9vw;
-      position:absolute;
-      width:100%;
-      top:1.7em;
+      top:12vw;
+    }
+    .header_tagline{
+      font-size:3.5vw;
+      top:22vw;
     }
 
     #practiceareadescrip{
@@ -656,6 +758,13 @@ padding-right:7vw;
     display:block;
   }
 }
+
+
+
+
+
+
+
 
 
 

@@ -19,19 +19,6 @@ context:
         layout:
             name: Modified Hyde Template
             url: "www.google.com"
-        menu:
-          - title: Home
-            url: index.html
-          - title: Attorneys
-            url: page1.html
-          - title: Practice Areas
-            url: page2.html
-          - title: Contact
-            url: page2.html
-          - title: Disclaimer
-            url: page2.html
-          - title: Locations
-            url: page2.html
 
 ### Advanced part ###
 
@@ -42,5 +29,7 @@ meta:
     # a great way of simply adding or modifying properties of a very large
     # number of files.
     nodemeta: meta.yaml
-    ga_tracking_code: XX-XXXXXXXX-X
+    title: "Hays & Skerry"
+    phone: "617-423-5599"
+
 
