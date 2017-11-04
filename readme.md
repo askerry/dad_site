@@ -1,17 +1,15 @@
-##Website for Hays and Skerry law firm
+## Website for Hays and Skerry law firm
 
-Website is under active development. You can view a dev version [here] (http://askerry.github.io/dad_site/).
-
-###Developers
+### Developers
 - Greg Skerry
 - Amy Skerry
 
-###Tools:
+### Tools:
 - Hyde
 - Less
 - Bootstrap (less mixins)
 
-###Notes:
+### Notes:
 - contact form relies on hacky workaround that piggybacks on an [external plugin](https://www.wufoo.com/)
 
 - dev hosting is on gh-pages
