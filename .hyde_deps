@@ -3,8 +3,7 @@
   !!python/unicode 'ga.j2', !!python/unicode 'base.j2']
 !!python/unicode 'Areas.html': [!!python/unicode 'consult.j2', !!python/unicode 'main.j2',
   !!python/unicode 'main_nav.j2', !!python/unicode 'ga.j2', !!python/unicode 'base.j2']
-!!python/unicode 'Attorneys.html': [!!python/unicode 'main.j2', !!python/unicode 'main_nav.j2',
-  !!python/unicode 'ga.j2', !!python/unicode 'base.j2']
+!!python/unicode 'Attorneys.html': [main.j2, main_nav.j2, ga.j2, base.j2]
 !!python/unicode 'Attorneys/Jeffrey-J-Skerry.shtml': []
 !!python/unicode 'Attorneys/William-C-Hays.shtml': []
 !!python/unicode 'BusinessLaw.html': [!!python/unicode 'practice_area.j2', !!python/unicode 'main_nav.j2',
@@ -30,8 +29,7 @@
 !!python/unicode 'TrustAdministration.html': [!!python/unicode 'practice_area.j2',
   !!python/unicode 'main_nav.j2', !!python/unicode 'ga.j2', !!python/unicode 'base.j2',
   !!python/unicode 'main.j2']
-!!python/unicode 'WilliamHays.html': [!!python/unicode 'main.j2', !!python/unicode 'main_nav.j2',
-  !!python/unicode 'ga.j2', !!python/unicode 'base.j2']
+!!python/unicode 'WilliamHays.html': [main.j2, main_nav.j2, ga.j2, base.j2]
 !!python/unicode 'areas/CommercialLaw.html': [practice_area.j2, main_nav.j2, base.j2,
   main.j2]
 !!python/unicode 'index.html': [!!python/unicode 'consult.j2', !!python/unicode 'landing_nav.j2',
