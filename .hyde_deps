@@ -11,8 +11,7 @@
 !!python/unicode 'CommercialLaw.html': [practice_area.j2, main_nav.j2, base.j2, main.j2]
 !!python/unicode 'Confirmation.html': [!!python/unicode 'landing_nav.j2', !!python/unicode 'ga.j2',
   !!python/unicode 'base.j2', !!python/unicode 'landing.j2']
-!!python/unicode 'Contact.html': [!!python/unicode 'main.j2', !!python/unicode 'main_nav.j2',
-  !!python/unicode 'ga.j2', !!python/unicode 'base.j2', !!python/unicode 'contact_form.j2']
+!!python/unicode 'Contact.html': [main.j2, main_nav.j2, ga.j2, base.j2, contact_form.j2]
 !!python/unicode 'Contact.shtml': []
 !!python/unicode 'EstatePlanning.html': [!!python/unicode 'practice_area.j2', !!python/unicode 'main_nav.j2',
   !!python/unicode 'ga.j2', !!python/unicode 'base.j2', !!python/unicode 'main.j2']
