@@ -1,5 +1,5 @@
 /*  font styles  */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400|Rosario:400);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400|Rosario:400|EB+Garamond:800);
 @import "../bootstrap/bootstrap.less";
 
 @-ms-viewport{ width: auto !important; }
@@ -34,6 +34,11 @@
           font-weight: 700;
      }
 }
+.header-font-family {
+    font-family: "EB Garamond",sans-serif !important;
+    font-weight: 800 !important;
+}
+
 @theme_super_light:#cfd2d7;
 @theme_light:#8f99aa;
 @theme_med_a: rgba(88,93,100, .2);
@@ -120,7 +125,6 @@ a:hover, a:focus {
 /* *************************************************************************************** */
 /*                                            MAIN                                         */
 /* *************************************************************************************** */
-
 
 .header div {
   color:@theme_super_light;
@@ -289,7 +293,7 @@ ul.descrip {
 .subbar_navbar a:hover{
   color:black !important;
 }
-
+XF
 #subbar_navbar_landing{
   bottom:3.5em !important;
 }
@@ -405,18 +409,17 @@ font-size: 1.2em;
 
 .title {
     .make-row(@gutter: @grid-gutter-width);
-    font-family:@my-font-family2;
     font-size:1.4em;
     padding-left:5%;
-    padding-top:0em;
+    padding-top:.5em;
   }
 
 .bright{
-    color:#bbddff important!;
+    color:#bbddff !important;
 }
 
 .title h1 {
-    font-size:6.0vw;
+    font-size:4.0vw;
     line-height:.9em;
   }
 
@@ -635,6 +638,7 @@ padding-right:7vw;
     .header_tagline{
       fontsize:3vw;
       top:16.5vw;
+      padding-bottom: 5px;
     }
 
   .title h1 {
@@ -697,7 +701,7 @@ padding-right:7vw;
     }
 
     .title h1 {
-      font-size:12vw;
+      font-size:10vw;
     }
     #subbar_navbar_landing{
         bottom:4.5em !important;
@@ -727,7 +731,7 @@ padding-right:7vw;
     }
     .header_tagline{
       font-size:3.5vw;
-      top:22vw;
+      top:21vw;
     }
 
     #practiceareadescrip{
