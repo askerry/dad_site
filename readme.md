@@ -14,5 +14,6 @@
 
 - dev hosting is on gh-pages
    1. make branch gh-pages containing only the deploy directory of the repo (git subtree split --prefix deploy -b gh-pages)
-   2. push the gh-pages branch to the gh-pages branch on github (git push -f origin gh-pages:gh-pages)
+   2. create a CNAME file with the custom domain (www.hays-skerry.com) in the deploy directory
+   3. push the gh-pages branch to the gh-pages branch on github (git push -f origin gh-pages:gh-pages)
 
